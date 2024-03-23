@@ -10,7 +10,7 @@ func GetTokens(c *gin.Context) {
 	userID := c.Query("userID")
 	c.IndentedJSON(200, GenerateTokens(userID))
 }
-
+// Access, Refresh токены обоюдно связаны
 func RefreshTokens(c *gin.Context) {
 	var tokensPair TokensPair
 	if err := c.BindJSON(&tokensPair); err != nil {
