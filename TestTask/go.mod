@@ -1,4 +1,4 @@
-module test-task-backdev
+module TestTask
 
 go 1.22.0
 
